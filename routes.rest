@@ -35,14 +35,14 @@ DELETE http://localhost:3000/contact/68ef8659c4b318497b029933 HTTP/1.1
 ### Get all Contacts
 // PRODUCTION
 Get All Users
-https://cse342-1-2.onrender.com/contacts HTTP/1.1
+https://cse341-project2-ehio.onrender.com/contacts HTTP/1.1
 
 ### Get Single User
 Get Single User
-https://cse342-1-2.onrender.com/contact/65a252c2c63717f07116997a HTTP/1.1
+https://cse341-project2-ehio.onrender.com/contact/65a252c2c63717f07116997a HTTP/1.1
 
 ### Create a Contact
-POST https://cse342-1-2.onrender.com/contacts HTTP/1.1
+POST https://cse341-project2-ehio.onrender.com/contacts HTTP/1.1
 content-Type: application/json
 
 {
@@ -54,7 +54,7 @@ content-Type: application/json
 }
 
 ### Update a Contact
-PUT https://cse342-1-2.onrender.com/contact/65a25167c63717f071169971 HTTP/1.1
+PUT https://cse341-project2-ehio.onrender.com/contact/65a25167c63717f071169971 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -66,4 +66,4 @@ Content-Type: application/json
 }
 
 ### Delete a Contact
-DELETE https://cse342-1-2.onrender.com/contact/68ef9c7eae3fd2e142de78b4 HTTP/1.1
+DELETE https://cse341-project2-ehio.onrender.com/contact/68ef9c7eae3fd2e142de78b4 HTTP/1.1
