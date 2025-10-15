@@ -10,9 +10,9 @@ POST http://localhost:3000/contacts HTTP/1.1
 content-Type: application/json
 
 {
-    "firstName": "Randalf",
+    "firstName": "Benedict",
     "lastName": "Ehigiator",
-    "email": "randhalf@gmail.com",
+    "email": "benedict.ehigiator@gmail.com",
     "favoriteColor": "Purple",
     "birthday": "1985-12-16"
 }

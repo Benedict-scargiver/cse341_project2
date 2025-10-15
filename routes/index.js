@@ -1,9 +1,11 @@
+const express = require('express')
 const router = require('express').Router()
-const path = require("path");
 
 router.get("/", (req, res) => {
-  const indexPath = path.join(__dirname, "..", "index.html");
-  res.sendFile(indexPath);
+  res.render("index", {
+    pageTitle: "CSE 341 Web Services",
+    url: process.env.APP_URL
+  });
 });
 
 router.use("/", require('./users'))
