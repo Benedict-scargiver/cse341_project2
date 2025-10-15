@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": true
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "Mongodb",
+            "name": "Render.com",
+            "connectString": "mongodb+srv://benedict_scargiver:bened3453@cluster0.bsbqynl.mongodb.net/project1"
+        }
+    ]
+}

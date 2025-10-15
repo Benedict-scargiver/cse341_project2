@@ -1,0 +1,69 @@
+// LOCALHOST
+### All Users
+GET http://localhost:3000/contacts
+
+### Single User
+GET http://localhost:3000/contact/68ef851dc4b318497b029932
+
+### Create a Contact
+POST http://localhost:3000/contacts HTTP/1.1
+content-Type: application/json
+
+{
+    "firstName": "Randalf",
+    "lastName": "Ehigiator",
+    "email": "randhalf@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "1985-12-16"
+}
+
+### Update a Contact
+PUT http://localhost:3000/contact/68ef851dc4b318497b029932 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Dove",
+    "lastName": "Smith",
+    "email": "dove.smith@email.com",
+    "favoriteColor": "Green",
+    "birthday": "1985-12-10"
+}
+
+### Delete a Contact
+DELETE http://localhost:3000/contact/68ef8659c4b318497b029933 HTTP/1.1
+
+### Get all Contacts
+// PRODUCTION
+Get All Users
+https://cse342-1-2.onrender.com/contacts HTTP/1.1
+
+### Get Single User
+Get Single User
+https://cse342-1-2.onrender.com/contact/65a252c2c63717f07116997a HTTP/1.1
+
+### Create a Contact
+POST https://cse342-1-2.onrender.com/contacts HTTP/1.1
+content-Type: application/json
+
+{
+    "firstName": "Benedict",
+    "lastName": "Nwanze",
+    "email": "benedict.nwanze@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "1985-12-16"
+}
+
+### Update a Contact
+PUT https://cse342-1-2.onrender.com/contact/65a25167c63717f071169971 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Dove",
+    "lastName": "Smith",
+    "email": "dove.smith@email.com",
+    "favoriteColor": "Green",
+    "birthday": "1985-12-10"
+}
+
+### Delete a Contact
+DELETE https://cse342-1-2.onrender.com/contact/68ef9c7eae3fd2e142de78b4 HTTP/1.1
