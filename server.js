@@ -45,12 +45,6 @@ app.get("/logout", (req, res) => {
   });
 });
 
-// Test route to check authentication
-const { ensureAuthenticated } = require("./middleware/auth");
-app.get("/auth/test", ensureAuthenticated, (req, res) => {
-  res.json({ authenticated: true, user: req.user });
-});
-
 // API and docs
 app.use("/", require("./routes"));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));

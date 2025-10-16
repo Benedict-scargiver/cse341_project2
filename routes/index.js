@@ -8,7 +8,11 @@ router.get("/", (req, res) => {
   });
 });
 
-router.use("/", require('./users'))
+
+router.use("/", require('./users'));
+router.use("/", require('./profession'));
+router.use("/", require('./books'));
+router.use("/", require('./author'));
 
 module.exports = router
 

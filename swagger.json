@@ -5,10 +5,10 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "cse341-project2-ehio.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/contacts": {
@@ -149,6 +149,43 @@
           }
         }
       }
+    },
+    "/professions": {
+      "get": {
+        "description": "Get all professions",
+        "produces": ["application/json"],
+        "responses": {"200": {"description": "OK"}}
+      },
+      "post": {
+        "description": "Create a profession",
+        "parameters": [
+          {"name": "body", "in": "body", "schema": {"type": "object", "properties": {"name": {"example": "Engineer"}, "description": {"example": "Builds things"}}}}
+        ],
+        "responses": {"201": {"description": "Created"}, "400": {"description": "Bad Request"}}
+      }
+    },
+    "/profession/{id}": {
+      "get": {"description": "Get a profession by ID", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}], "responses": {"200": {"description": "OK"}, "404": {"description": "Not Found"}}},
+      "put": {"description": "Update a profession", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}, {"name": "body", "in": "body", "schema": {"type": "object", "properties": {"name": {"example": "Engineer"}, "description": {"example": "Builds things"}}}}], "responses": {"200": {"description": "Updated"}, "400": {"description": "Bad Request"}, "404": {"description": "Not Found"}}},
+      "delete": {"description": "Delete a profession", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}], "responses": {"200": {"description": "Deleted"}, "404": {"description": "Not Found"}}}
+    },
+    "/books": {
+      "get": {"description": "Get all books", "produces": ["application/json"], "responses": {"200": {"description": "OK"}}},
+      "post": {"description": "Create a book", "parameters": [{"name": "body", "in": "body", "schema": {"type": "object", "properties": {"title": {"example": "Book Title"}, "author": {"example": "Author Name"}, "year": {"example": 2023}}}}], "responses": {"201": {"description": "Created"}, "400": {"description": "Bad Request"}}}
+    },
+    "/book/{id}": {
+      "get": {"description": "Get a book by ID", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}], "responses": {"200": {"description": "OK"}, "404": {"description": "Not Found"}}},
+      "put": {"description": "Update a book", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}, {"name": "body", "in": "body", "schema": {"type": "object", "properties": {"title": {"example": "Book Title"}, "author": {"example": "Author Name"}, "year": {"example": 2023}}}}], "responses": {"200": {"description": "Updated"}, "400": {"description": "Bad Request"}, "404": {"description": "Not Found"}}},
+      "delete": {"description": "Delete a book", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}], "responses": {"200": {"description": "Deleted"}, "404": {"description": "Not Found"}}}
+    },
+    "/authors": {
+      "get": {"description": "Get all authors", "produces": ["application/json"], "responses": {"200": {"description": "OK"}}},
+      "post": {"description": "Create an author", "parameters": [{"name": "body", "in": "body", "schema": {"type": "object", "properties": {"name": {"example": "Author Name"}, "bio": {"example": "Short bio"}}}}], "responses": {"201": {"description": "Created"}, "400": {"description": "Bad Request"}}}
+    },
+    "/author/{id}": {
+      "get": {"description": "Get an author by ID", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}], "responses": {"200": {"description": "OK"}, "404": {"description": "Not Found"}}},
+      "put": {"description": "Update an author", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}, {"name": "body", "in": "body", "schema": {"type": "object", "properties": {"name": {"example": "Author Name"}, "bio": {"example": "Short bio"}}}}], "responses": {"200": {"description": "Updated"}, "400": {"description": "Bad Request"}, "404": {"description": "Not Found"}}},
+      "delete": {"description": "Delete an author", "parameters": [{"name": "id", "in": "path", "required": true, "type": "string"}], "responses": {"200": {"description": "Deleted"}, "404": {"description": "Not Found"}}}
     }
   }
 }
