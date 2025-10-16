@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon server.js",
     "start": "node server.js ",
     "swagger": "node swagger.js"
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "dotenv": "^17.2.3",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.10",
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.1"
