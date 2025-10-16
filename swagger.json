@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "https://cse341-project2-ehio.onrender.com",
+  "host": "cse341-project2-ehio.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
